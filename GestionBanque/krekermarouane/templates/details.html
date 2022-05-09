@@ -1,0 +1,24 @@
+<div class="card mt-3">
+    <div class="card-body">
+        <table class="table table-hover">
+    <thead>
+        <tr>
+          <th scope="col">code</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{client.code}}</td>
+          <td>{{client.nom}}</td>
+          <td>{{client.prenom}} </td>
+          <td>
+            <a href="/comptes/details/detailsop/{{client.code }}" class="btn btn-sm btn-warning" >Detail Operation</a>         
+        </td>
+        </tr>
+    
+      </tbody>
+        </table>
+    </div>
+</div>

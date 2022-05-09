@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+        <table class="table table-hover">
+    <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th> 
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in clients %}
+        <tr>
+          <td>{{c.code}}</td>
+          <td>{{c.nom}}</td>
+          <td>{{c.prenom}} </td>       
+        </tr>
+      {% endfor %}
+      </tbody>
+        </table>
+        
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+          </ul>
+        </nav>
+    </div>
+</div>
+{% endblock content %}
